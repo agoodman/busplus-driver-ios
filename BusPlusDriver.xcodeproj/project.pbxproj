@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EE8FD9016658CE600401606 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FD8F16658CE600401606 /* UIKit.framework */; };
+		7EE8FD9216658CE600401606 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FD9116658CE600401606 /* Foundation.framework */; };
+		7EE8FD9416658CE600401606 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FD9316658CE600401606 /* CoreGraphics.framework */; };
+		7EE8FD9A16658CE700401606 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FD9816658CE700401606 /* InfoPlist.strings */; };
+		7EE8FD9C16658CE700401606 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8FD9B16658CE700401606 /* main.m */; };
+		7EE8FDA016658CE700401606 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8FD9F16658CE700401606 /* AppDelegate.m */; };
+		7EE8FDA216658CE700401606 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDA116658CE700401606 /* Default.png */; };
+		7EE8FDA416658CE700401606 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDA316658CE700401606 /* Default@2x.png */; };
+		7EE8FDA616658CE700401606 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDA516658CE700401606 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7EE8FD8B16658CE600401606 /* BusPlusDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPlusDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EE8FD8F16658CE600401606 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7EE8FD9116658CE600401606 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7EE8FD9316658CE600401606 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7EE8FD9716658CE700401606 /* BusPlusDriver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BusPlusDriver-Info.plist"; sourceTree = "<group>"; };
+		7EE8FD9916658CE700401606 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7EE8FD9B16658CE700401606 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7EE8FD9D16658CE700401606 /* BusPlusDriver-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BusPlusDriver-Prefix.pch"; sourceTree = "<group>"; };
+		7EE8FD9E16658CE700401606 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7EE8FD9F16658CE700401606 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7EE8FDA116658CE700401606 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7EE8FDA316658CE700401606 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7EE8FDA516658CE700401606 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EE8FD8816658CE600401606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EE8FD9016658CE600401606 /* UIKit.framework in Frameworks */,
+				7EE8FD9216658CE600401606 /* Foundation.framework in Frameworks */,
+				7EE8FD9416658CE600401606 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EE8FD8016658CE600401606 = {
+			isa = PBXGroup;
+			children = (
+				7EE8FD9516658CE700401606 /* BusPlusDriver */,
+				7EE8FD8E16658CE600401606 /* Frameworks */,
+				7EE8FD8C16658CE600401606 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EE8FD8C16658CE600401606 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EE8FD8B16658CE600401606 /* BusPlusDriver.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EE8FD8E16658CE600401606 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EE8FD8F16658CE600401606 /* UIKit.framework */,
+				7EE8FD9116658CE600401606 /* Foundation.framework */,
+				7EE8FD9316658CE600401606 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EE8FD9516658CE700401606 /* BusPlusDriver */ = {
+			isa = PBXGroup;
+			children = (
+				7EE8FD9E16658CE700401606 /* AppDelegate.h */,
+				7EE8FD9F16658CE700401606 /* AppDelegate.m */,
+				7EE8FD9616658CE700401606 /* Supporting Files */,
+			);
+			path = BusPlusDriver;
+			sourceTree = "<group>";
+		};
+		7EE8FD9616658CE700401606 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EE8FD9716658CE700401606 /* BusPlusDriver-Info.plist */,
+				7EE8FD9816658CE700401606 /* InfoPlist.strings */,
+				7EE8FD9B16658CE700401606 /* main.m */,
+				7EE8FD9D16658CE700401606 /* BusPlusDriver-Prefix.pch */,
+				7EE8FDA116658CE700401606 /* Default.png */,
+				7EE8FDA316658CE700401606 /* Default@2x.png */,
+				7EE8FDA516658CE700401606 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EE8FD8A16658CE600401606 /* BusPlusDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EE8FDA916658CE700401606 /* Build configuration list for PBXNativeTarget "BusPlusDriver" */;
+			buildPhases = (
+				7EE8FD8716658CE600401606 /* Sources */,
+				7EE8FD8816658CE600401606 /* Frameworks */,
+				7EE8FD8916658CE600401606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BusPlusDriver;
+			productName = BusPlusDriver;
+			productReference = 7EE8FD8B16658CE600401606 /* BusPlusDriver.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EE8FD8216658CE600401606 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Migrant Studios";
+			};
+			buildConfigurationList = 7EE8FD8516658CE600401606 /* Build configuration list for PBXProject "BusPlusDriver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7EE8FD8016658CE600401606;
+			productRefGroup = 7EE8FD8C16658CE600401606 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EE8FD8A16658CE600401606 /* BusPlusDriver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EE8FD8916658CE600401606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EE8FD9A16658CE700401606 /* InfoPlist.strings in Resources */,
+				7EE8FDA216658CE700401606 /* Default.png in Resources */,
+				7EE8FDA416658CE700401606 /* Default@2x.png in Resources */,
+				7EE8FDA616658CE700401606 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EE8FD8716658CE600401606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EE8FD9C16658CE700401606 /* main.m in Sources */,
+				7EE8FDA016658CE700401606 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7EE8FD9816658CE700401606 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EE8FD9916658CE700401606 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EE8FDA716658CE700401606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EE8FDA816658CE700401606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EE8FDAA16658CE700401606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BusPlusDriver/BusPlusDriver-Prefix.pch";
+				INFOPLIST_FILE = "BusPlusDriver/BusPlusDriver-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7EE8FDAB16658CE700401606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BusPlusDriver/BusPlusDriver-Prefix.pch";
+				INFOPLIST_FILE = "BusPlusDriver/BusPlusDriver-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EE8FD8516658CE600401606 /* Build configuration list for PBXProject "BusPlusDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EE8FDA716658CE700401606 /* Debug */,
+				7EE8FDA816658CE700401606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EE8FDA916658CE700401606 /* Build configuration list for PBXNativeTarget "BusPlusDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EE8FDAA16658CE700401606 /* Debug */,
+				7EE8FDAB16658CE700401606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EE8FD8216658CE600401606 /* Project object */;
+}
