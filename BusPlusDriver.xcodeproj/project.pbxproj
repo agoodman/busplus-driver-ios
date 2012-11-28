@@ -16,9 +16,18 @@
 		7EE8FDA216658CE700401606 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDA116658CE700401606 /* Default.png */; };
 		7EE8FDA416658CE700401606 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDA316658CE700401606 /* Default@2x.png */; };
 		7EE8FDA616658CE700401606 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDA516658CE700401606 /* Default-568h@2x.png */; };
-		7EE8FDC016658D6C00401606 /* libBus Plus Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDB816658D5700401606 /* libBus Plus Core.a */; };
+		7EE8FDC016658D6C00401606 /* libBusPlusCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDB816658D5700401606 /* libBusPlusCore.a */; };
 		7EE8FDC316658DC100401606 /* Storyboard-Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDC216658DC100401606 /* Storyboard-Pad.storyboard */; };
 		7EE8FDC516658E8D00401606 /* Storyboard-Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDC416658E8D00401606 /* Storyboard-Phone.storyboard */; };
+		7EE8FDC7166591B500401606 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDC6166591B500401606 /* MapKit.framework */; };
+		7EE8FDCA1665924500401606 /* WaypointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8FDC91665924500401606 /* WaypointsViewController.m */; };
+		7EE8FDFF1665977B00401606 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDF91665977B00401606 /* CFNetwork.framework */; };
+		7EE8FE001665977B00401606 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDFA1665977B00401606 /* CoreData.framework */; };
+		7EE8FE011665977B00401606 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDFB1665977B00401606 /* libxml2.dylib */; };
+		7EE8FE021665977B00401606 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDFC1665977B00401606 /* MobileCoreServices.framework */; };
+		7EE8FE031665977B00401606 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDFD1665977B00401606 /* Security.framework */; };
+		7EE8FE041665977B00401606 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDFE1665977B00401606 /* SystemConfiguration.framework */; };
+		7EE8FE061665979500401606 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FE051665979500401606 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,16 @@
 		7EE8FDAC16658D5600401606 /* Bus Plus Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Bus Plus Core.xcodeproj"; path = "BusPlusCore/Bus Plus Core.xcodeproj"; sourceTree = "<group>"; };
 		7EE8FDC216658DC100401606 /* Storyboard-Pad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Storyboard-Pad.storyboard"; sourceTree = "<group>"; };
 		7EE8FDC416658E8D00401606 /* Storyboard-Phone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Storyboard-Phone.storyboard"; sourceTree = "<group>"; };
+		7EE8FDC6166591B500401606 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7EE8FDC81665924500401606 /* WaypointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaypointsViewController.h; sourceTree = "<group>"; };
+		7EE8FDC91665924500401606 /* WaypointsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaypointsViewController.m; sourceTree = "<group>"; };
+		7EE8FDF91665977B00401606 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7EE8FDFA1665977B00401606 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7EE8FDFB1665977B00401606 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		7EE8FDFC1665977B00401606 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7EE8FDFD1665977B00401606 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7EE8FDFE1665977B00401606 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7EE8FE051665979500401606 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +81,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EE8FDC016658D6C00401606 /* libBus Plus Core.a in Frameworks */,
+				7EE8FE061665979500401606 /* QuartzCore.framework in Frameworks */,
+				7EE8FDFF1665977B00401606 /* CFNetwork.framework in Frameworks */,
+				7EE8FE001665977B00401606 /* CoreData.framework in Frameworks */,
+				7EE8FE011665977B00401606 /* libxml2.dylib in Frameworks */,
+				7EE8FE021665977B00401606 /* MobileCoreServices.framework in Frameworks */,
+				7EE8FE031665977B00401606 /* Security.framework in Frameworks */,
+				7EE8FE041665977B00401606 /* SystemConfiguration.framework in Frameworks */,
+				7EE8FDC016658D6C00401606 /* libBusPlusCore.a in Frameworks */,
+				7EE8FDC7166591B500401606 /* MapKit.framework in Frameworks */,
 				7EE8FD9016658CE600401606 /* UIKit.framework in Frameworks */,
 				7EE8FD9216658CE600401606 /* Foundation.framework in Frameworks */,
 				7EE8FD9416658CE600401606 /* CoreGraphics.framework in Frameworks */,
@@ -93,6 +120,14 @@
 		7EE8FD8E16658CE600401606 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EE8FE051665979500401606 /* QuartzCore.framework */,
+				7EE8FDF91665977B00401606 /* CFNetwork.framework */,
+				7EE8FDFA1665977B00401606 /* CoreData.framework */,
+				7EE8FDFB1665977B00401606 /* libxml2.dylib */,
+				7EE8FDFC1665977B00401606 /* MobileCoreServices.framework */,
+				7EE8FDFD1665977B00401606 /* Security.framework */,
+				7EE8FDFE1665977B00401606 /* SystemConfiguration.framework */,
+				7EE8FDC6166591B500401606 /* MapKit.framework */,
 				7EE8FD8F16658CE600401606 /* UIKit.framework */,
 				7EE8FD9116658CE600401606 /* Foundation.framework */,
 				7EE8FD9316658CE600401606 /* CoreGraphics.framework */,
@@ -107,6 +142,8 @@
 				7EE8FD9E16658CE700401606 /* AppDelegate.h */,
 				7EE8FD9F16658CE700401606 /* AppDelegate.m */,
 				7EE8FD9616658CE700401606 /* Supporting Files */,
+				7EE8FDC81665924500401606 /* WaypointsViewController.h */,
+				7EE8FDC91665924500401606 /* WaypointsViewController.m */,
 			);
 			path = BusPlusDriver;
 			sourceTree = "<group>";
@@ -128,7 +165,7 @@
 		7EE8FDAD16658D5600401606 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7EE8FDB816658D5700401606 /* libBus Plus Core.a */,
+				7EE8FDB816658D5700401606 /* libBusPlusCore.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,10 +233,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		7EE8FDB816658D5700401606 /* libBus Plus Core.a */ = {
+		7EE8FDB816658D5700401606 /* libBusPlusCore.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libBus Plus Core.a";
+			path = libBusPlusCore.a;
 			remoteRef = 7EE8FDB716658D5700401606 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -228,6 +265,7 @@
 			files = (
 				7EE8FD9C16658CE700401606 /* main.m in Sources */,
 				7EE8FDA016658CE700401606 /* AppDelegate.m in Sources */,
+				7EE8FDCA1665924500401606 /* WaypointsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,9 +346,12 @@
 		7EE8FDAA16658CE700401606 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BusPlusDriver/BusPlusDriver-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "BusPlusDriver/BusPlusDriver-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -319,9 +360,12 @@
 		7EE8FDAB16658CE700401606 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BusPlusDriver/BusPlusDriver-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "BusPlusDriver/BusPlusDriver-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -346,6 +390,7 @@
 				7EE8FDAB16658CE700401606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

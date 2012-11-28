@@ -19,15 +19,19 @@
             </objects>
             <point key="canvasLocation" x="-187" y="24"/>
         </scene>
-        <!--View Controller - BusPlus Driver-->
+        <!--Waypoints View Controller - BusPlus Driver-->
         <scene sceneID="r1M-OG-jkW">
             <objects>
-                <viewController id="7Md-YJ-0v6" sceneMemberID="viewController">
+                <viewController id="7Md-YJ-0v6" customClass="WaypointsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FG2-Ew-yyX">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iBl-x5-z4q"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iBl-x5-z4q">
+                                <connections>
+                                    <outlet property="delegate" destination="7Md-YJ-0v6" id="wkv-iV-KnN"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -38,12 +42,26 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BusPlus Driver" id="OPC-c6-YCG"/>
+                    <connections>
+                        <outlet property="mapView" destination="iBl-x5-z4q" id="pGB-xC-d5O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG9-Pt-XNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="234" y="24"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="WaypointsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WaypointsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
