@@ -33,7 +33,9 @@
         <attribute name="driverId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="onDuty" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="seatsAvailable" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vehicleId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="candidates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Candidate" inverseName="vehicle" inverseEntity="Candidate" syncable="YES"/>
         <relationship name="driver" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Driver" inverseName="vehicle" inverseEntity="Driver" syncable="YES"/>
@@ -43,6 +45,6 @@
         <element name="Candidate" positionX="160" positionY="192" width="128" height="150"/>
         <element name="Driver" positionX="160" positionY="192" width="128" height="135"/>
         <element name="Passenger" positionX="160" positionY="192" width="128" height="195"/>
-        <element name="Vehicle" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="Vehicle" positionX="160" positionY="192" width="128" height="195"/>
     </elements>
 </model>

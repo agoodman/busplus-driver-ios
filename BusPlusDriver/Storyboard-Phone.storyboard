@@ -286,7 +286,7 @@
                     <navigationItem key="navigationItem" title="Authenticate" id="SkB-3I-ZkM">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="xGC-mi-RYL">
                             <connections>
-                                <action selector="nextButtonPressed:" destination="h7S-dH-Ux9" id="5s4-yo-v8f"/>
+                                <action selector="doneButtonPressed:" destination="h7S-dH-Ux9" id="UuY-Xv-y6b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

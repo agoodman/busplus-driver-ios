@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EB705F61665DFA7009D2CA0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB705F51665DFA7009D2CA0 /* CoreLocation.framework */; };
 		7EE8FD9016658CE600401606 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FD8F16658CE600401606 /* UIKit.framework */; };
 		7EE8FD9216658CE600401606 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FD9116658CE600401606 /* Foundation.framework */; };
 		7EE8FD9416658CE600401606 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FD9316658CE600401606 /* CoreGraphics.framework */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7EB705F51665DFA7009D2CA0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7EE8FD8B16658CE600401606 /* BusPlusDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPlusDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE8FD8F16658CE600401606 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7EE8FD9116658CE600401606 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB705F61665DFA7009D2CA0 /* CoreLocation.framework in Frameworks */,
 				7EE8FE061665979500401606 /* QuartzCore.framework in Frameworks */,
 				7EE8FDFF1665977B00401606 /* CFNetwork.framework in Frameworks */,
 				7EE8FE001665977B00401606 /* CoreData.framework in Frameworks */,
@@ -137,6 +140,7 @@
 		7EE8FD8E16658CE600401606 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EB705F51665DFA7009D2CA0 /* CoreLocation.framework */,
 				7EE8FE051665979500401606 /* QuartzCore.framework */,
 				7EE8FDF91665977B00401606 /* CFNetwork.framework */,
 				7EE8FDFA1665977B00401606 /* CoreData.framework */,

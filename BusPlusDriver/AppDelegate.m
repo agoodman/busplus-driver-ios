@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // set up RestKit
-    RKObjectManager* tMgr = [RKObjectManager managerWithBaseURLString:@"https://busplus.herokuapp.com/api"];
+    RKObjectManager* tMgr = [RKObjectManager managerWithBaseURLString:@"http://buspl.us/api"];
     tMgr.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"BusPlus.sqlite3"];
     
     [Passenger initObjectLoader:tMgr];
@@ -50,6 +50,25 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Push notification
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    async_main(^{
+        NSLog(@"simulating push notification");
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"PushNotificationEnabled" object:@"abc123"];
+    });
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    async_main(^{
+        NSString* tRaw = [deviceToken description];
+        NSString* tToken = [[[tRaw stringByReplacingOccurrencesOfString:@"<" withString:@""] stringByReplacingOccurrencesOfString:@">" withString:@""] stringByReplacingOccurrencesOfString:@" " withString:@""];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"PushNotificationEnabled" object:tToken];
+    });
 }
 
 @end

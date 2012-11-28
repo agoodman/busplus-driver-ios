@@ -54,6 +54,7 @@
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
+    NSLog(@"Driver Web Error: %@",objectLoader.response.bodyAsString);
     Alert(@"Driver Registration Error", error.localizedDescription);
 }
 
