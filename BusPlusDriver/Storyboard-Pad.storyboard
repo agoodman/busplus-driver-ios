@@ -19,6 +19,123 @@
             </objects>
             <point key="canvasLocation" x="-1092" y="-310"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uYD-Zf-PUd">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="DJM-Mx-rMu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bqs-zo-Wbe">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1K8-eS-Pb3" kind="relationship" relationship="rootViewController" id="uq3-02-aae"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pKy-qT-xvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-163" y="-1496"/>
+        </scene>
+        <!--Session Start View Controller - Enter Email Address-->
+        <scene sceneID="7Wr-Sr-le4">
+            <objects>
+                <viewController id="1K8-eS-Pb3" customClass="SessionStartViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kr8-OE-a3y">
+                        <rect key="frame" x="0.0" y="64" width="540" height="556"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter your email address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5I-mY-TM5">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="you@example.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z8n-Ck-G7l">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1K8-eS-Pb3" id="eK5-vo-mwO"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="F5I-mY-TM5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Cf7-Tq-qlh"/>
+                            <constraint firstAttribute="trailing" secondItem="Z8n-Ck-G7l" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Fha-Rd-JeS"/>
+                            <constraint firstItem="Z8n-Ck-G7l" firstAttribute="top" secondItem="F5I-mY-TM5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SVk-id-4WS"/>
+                            <constraint firstItem="F5I-mY-TM5" firstAttribute="top" secondItem="kr8-OE-a3y" secondAttribute="top" constant="20" symbolic="YES" type="default" id="VNl-YK-5xd"/>
+                            <constraint firstItem="F5I-mY-TM5" firstAttribute="leading" secondItem="kr8-OE-a3y" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dLb-VC-oOG"/>
+                            <constraint firstItem="Z8n-Ck-G7l" firstAttribute="leading" secondItem="kr8-OE-a3y" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fVM-Jz-Gmm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Enter Email Address" id="KiT-i3-QTp">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="4Rt-8W-e5u">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="1K8-eS-Pb3" id="ZRk-2w-XYe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="label" destination="F5I-mY-TM5" id="9Cx-YZ-qoz"/>
+                        <outlet property="nextButton" destination="4Rt-8W-e5u" id="dT9-e1-5sn"/>
+                        <outlet property="textField" destination="Z8n-Ck-G7l" id="oKn-b8-3s7"/>
+                        <segue destination="9kc-DQ-aqs" kind="push" identifier="CreateSession" id="Kc8-yY-qic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9Z-3E-AVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="507" y="-1496"/>
+        </scene>
+        <!--Session Auth View Controller - Authenticate-->
+        <scene sceneID="sg8-ne-GzF">
+            <objects>
+                <viewController id="9kc-DQ-aqs" customClass="SessionAuthViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i7e-r9-BaL">
+                        <rect key="frame" x="0.0" y="64" width="540" height="556"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vr-e3-C4Z">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A123-456-78-901-2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDt-GP-ZEj">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="namePhonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Now, enter your license number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcJ-Yf-RBn">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vDt-GP-ZEj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7Hb-up-TFO"/>
+                            <constraint firstItem="vDt-GP-ZEj" firstAttribute="leading" secondItem="i7e-r9-BaL" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="E6g-Nf-qp9"/>
+                            <constraint firstAttribute="trailing" secondItem="9vr-e3-C4Z" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="F5u-Wo-Iea"/>
+                            <constraint firstAttribute="trailing" secondItem="VcJ-Yf-RBn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="K0q-Fi-Hy7"/>
+                            <constraint firstItem="9vr-e3-C4Z" firstAttribute="leading" secondItem="i7e-r9-BaL" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="a76-ru-87C"/>
+                            <constraint firstItem="vDt-GP-ZEj" firstAttribute="top" secondItem="VcJ-Yf-RBn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="siK-Gp-JUb"/>
+                            <constraint firstItem="VcJ-Yf-RBn" firstAttribute="top" secondItem="9vr-e3-C4Z" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vlb-ul-aV1"/>
+                            <constraint firstItem="9vr-e3-C4Z" firstAttribute="top" secondItem="i7e-r9-BaL" secondAttribute="top" constant="20" symbolic="YES" type="default" id="z2b-SO-GCn"/>
+                            <constraint firstItem="VcJ-Yf-RBn" firstAttribute="leading" secondItem="i7e-r9-BaL" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zIr-xv-faa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Authenticate" id="PXG-s3-vqi">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="done" id="z8W-7n-Em2">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="9kc-DQ-aqs" id="gNb-w5-kIo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="z8W-7n-Em2" id="0j4-jX-Fjs"/>
+                        <outlet property="label" destination="9vr-e3-C4Z" id="Frg-IJ-bwe"/>
+                        <outlet property="textField" destination="vDt-GP-ZEj" id="D8N-e3-B7e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpp-Ka-7zN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="-1496"/>
+        </scene>
         <!--Waypoints View Controller - BusPlus Driver-->
         <scene sceneID="MZs-sv-lOX">
             <objects>
@@ -44,6 +161,7 @@
                     <navigationItem key="navigationItem" title="BusPlus Driver" id="Ozz-4J-KmL"/>
                     <connections>
                         <outlet property="mapView" destination="GNH-2i-Mnp" id="Gr1-xC-5L9"/>
+                        <segue destination="DJM-Mx-rMu" kind="modal" identifier="CreateSession" modalPresentationStyle="formSheet" id="fS0-tx-rjF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPL-hu-fL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -54,6 +172,24 @@
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SessionAuthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SessionAuthViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonPressed:"/>
+                <relationship kind="outlet" name="doneButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="SessionStartViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SessionStartViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="nextButtonPressed:"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="WaypointsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WaypointsViewController.h"/>

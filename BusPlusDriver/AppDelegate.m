@@ -8,11 +8,20 @@
 
 #import "AppDelegate.h"
 
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [self.window makeKeyAndVisible];
+    // set up RestKit
+    RKObjectManager* tMgr = [RKObjectManager managerWithBaseURLString:@"https://busplus.herokuapp.com/api"];
+    tMgr.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"BusPlus.sqlite3"];
+    
+    [Passenger initObjectLoader:tMgr];
+    [Vehicle initObjectLoader:tMgr];
+    [Candidate initObjectLoader:tMgr];
+    [Driver initObjectLoader:tMgr];
+    
     return YES;
 }
 

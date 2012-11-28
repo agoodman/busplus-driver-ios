@@ -8,6 +8,7 @@
 
 #import "WaypointsViewController.h"
 
+
 @interface WaypointsViewController ()
 
 @end
@@ -19,7 +20,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    Driver* tDriver = [Driver findFirst];
+    if( !tDriver ) {
+        [self performSegueWithIdentifier:@"CreateSession" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning

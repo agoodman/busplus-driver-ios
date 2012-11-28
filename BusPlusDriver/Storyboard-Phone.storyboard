@@ -44,24 +44,131 @@
                     <navigationItem key="navigationItem" title="BusPlus Driver" id="OPC-c6-YCG"/>
                     <connections>
                         <outlet property="mapView" destination="iBl-x5-z4q" id="pGB-xC-d5O"/>
+                        <segue destination="zaI-Eo-MfG" kind="modal" identifier="CreateSession" id="igW-1T-ZyF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG9-Pt-XNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="234" y="24"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ScD-Cg-BqF">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="zaI-Eo-MfG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nto-6r-y17">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bG7-pT-gG7" kind="relationship" relationship="rootViewController" id="Ihy-DU-QJp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJ3-yY-yYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="-678"/>
+        </scene>
+        <!--Session Start View Controller - Sign In Required-->
+        <scene sceneID="HQb-dj-C7D">
+            <objects>
+                <viewController id="bG7-pT-gG7" customClass="SessionStartViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qLC-qi-9qy">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="you@example.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qth-Vp-GiP">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter your email address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ti-cJ-WZ7">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Ti-cJ-WZ7" firstAttribute="top" secondItem="qLC-qi-9qy" secondAttribute="top" constant="20" symbolic="YES" type="default" id="0ke-tJ-NDo"/>
+                            <constraint firstItem="2Ti-cJ-WZ7" firstAttribute="leading" secondItem="qLC-qi-9qy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cvd-7u-nZj"/>
+                            <constraint firstItem="qth-Vp-GiP" firstAttribute="leading" secondItem="qLC-qi-9qy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ink-YH-UhL"/>
+                            <constraint firstAttribute="trailing" secondItem="qth-Vp-GiP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="twe-YN-8PP"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ti-cJ-WZ7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vA7-aU-p4x"/>
+                            <constraint firstItem="qth-Vp-GiP" firstAttribute="top" secondItem="2Ti-cJ-WZ7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zl0-KD-oV8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign In Required" id="H7B-0s-uP8">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="X6v-zU-5Xv">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="bG7-pT-gG7" id="nBi-5W-bxz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="label" destination="2Ti-cJ-WZ7" id="BUm-nl-ipl"/>
+                        <outlet property="nextButton" destination="X6v-zU-5Xv" id="sFp-nD-gPc"/>
+                        <outlet property="textField" destination="qth-Vp-GiP" id="nem-XR-fMD"/>
+                        <segue destination="h7S-dH-Ux9" kind="push" identifier="CreateSession" id="4fG-sg-6OP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fD3-Tu-45Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="-678"/>
+        </scene>
+        <!--Session Auth View Controller - Authenticate-->
+        <scene sceneID="2RO-Qo-e5V">
+            <objects>
+                <viewController id="h7S-dH-Ux9" customClass="SessionAuthViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hKE-tx-S1a">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A123-456-78-901-2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="klu-Ye-OSz">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="namePhonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="h7S-dH-Ux9" id="AGV-HH-dXe"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Now, enter your license number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hs3-ZB-0Va">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znf-Br-tur">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="klu-Ye-OSz" firstAttribute="top" secondItem="Hs3-ZB-0Va" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8hU-wL-T3E"/>
+                            <constraint firstItem="klu-Ye-OSz" firstAttribute="leading" secondItem="hKE-tx-S1a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8wB-Hu-7bc"/>
+                            <constraint firstAttribute="trailing" secondItem="klu-Ye-OSz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ebv-gK-bsv"/>
+                            <constraint firstItem="Znf-Br-tur" firstAttribute="leading" secondItem="hKE-tx-S1a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Q1S-CA-NRh"/>
+                            <constraint firstAttribute="trailing" secondItem="Znf-Br-tur" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WjE-sv-OgN"/>
+                            <constraint firstItem="Hs3-ZB-0Va" firstAttribute="leading" secondItem="hKE-tx-S1a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gid-ot-zes"/>
+                            <constraint firstAttribute="trailing" secondItem="Hs3-ZB-0Va" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="maf-HN-tFu"/>
+                            <constraint firstItem="Znf-Br-tur" firstAttribute="top" secondItem="hKE-tx-S1a" secondAttribute="top" constant="20" symbolic="YES" type="default" id="rWf-al-PZ8"/>
+                            <constraint firstItem="Hs3-ZB-0Va" firstAttribute="top" secondItem="Znf-Br-tur" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vZC-cu-YyR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Authenticate" id="SkB-3I-ZkM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xGC-mi-RYL">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="h7S-dH-Ux9" id="5s4-yo-v8f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="xGC-mi-RYL" id="5bv-VH-XpY"/>
+                        <outlet property="label" destination="Znf-Br-tur" id="D8q-ir-ybf"/>
+                        <outlet property="textField" destination="klu-Ye-OSz" id="8D6-V7-zTJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MqN-kK-wLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="-680"/>
+        </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="WaypointsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WaypointsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

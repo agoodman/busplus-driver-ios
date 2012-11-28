@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Candidate" representedClassName="Candidate" syncable="YES">
+        <attribute name="assignedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="bid" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="candidateId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="passengerId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="vehicleId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="passenger" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Passenger" inverseName="candidates" inverseEntity="Passenger" syncable="YES"/>
+        <relationship name="vehicle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Vehicle" inverseName="candidates" inverseEntity="Vehicle" syncable="YES"/>
+    </entity>
+    <entity name="Driver" representedClassName="Driver" syncable="YES">
+        <attribute name="driverId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="licenseNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="vehicle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Vehicle" inverseName="driver" inverseEntity="Vehicle" syncable="YES"/>
+    </entity>
+    <entity name="Passenger" representedClassName="Passenger" syncable="YES">
+        <attribute name="assignedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="endLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="endLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="passengerId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="startLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="startLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="vehicleId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="candidates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Candidate" inverseName="passenger" inverseEntity="Candidate" syncable="YES"/>
+        <relationship name="vehicle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vehicle" inverseName="passengers" inverseEntity="Vehicle" syncable="YES"/>
+    </entity>
+    <entity name="Vehicle" representedClassName="Vehicle" syncable="YES">
+        <attribute name="driverId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="seatsAvailable" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="vehicleId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="candidates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Candidate" inverseName="vehicle" inverseEntity="Candidate" syncable="YES"/>
+        <relationship name="driver" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Driver" inverseName="vehicle" inverseEntity="Driver" syncable="YES"/>
+        <relationship name="passengers" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Passenger" inverseName="vehicle" inverseEntity="Passenger" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Candidate" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="Driver" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Passenger" positionX="160" positionY="192" width="128" height="195"/>
+        <element name="Vehicle" positionX="160" positionY="192" width="128" height="165"/>
+    </elements>
+</model>
