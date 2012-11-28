@@ -149,18 +149,35 @@
                                     <outlet property="delegate" destination="RHL-wP-zTy" id="yCP-m1-eiy"/>
                                 </connections>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0N-a9-Fzw">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JOC-Rc-Zgk"/>
+                                    <barButtonItem title="On Duty:" style="plain" id="mwV-i7-kcP"/>
+                                    <barButtonItem title="NO" style="plain" id="XhW-Os-4eQ"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="k0N-a9-Fzw" firstAttribute="top" secondItem="GNH-2i-Mnp" secondAttribute="bottom" type="default" id="6n4-ld-sMs"/>
                             <constraint firstItem="GNH-2i-Mnp" firstAttribute="top" secondItem="cYZ-5V-j6X" secondAttribute="top" type="default" id="AWG-cY-Kl2"/>
                             <constraint firstItem="GNH-2i-Mnp" firstAttribute="trailing" secondItem="cYZ-5V-j6X" secondAttribute="trailing" type="default" id="RXn-1i-lOK"/>
-                            <constraint firstItem="GNH-2i-Mnp" firstAttribute="bottom" secondItem="cYZ-5V-j6X" secondAttribute="bottom" type="default" id="aUH-hH-Wwj"/>
+                            <constraint firstItem="k0N-a9-Fzw" firstAttribute="bottom" secondItem="cYZ-5V-j6X" secondAttribute="bottom" type="default" id="XBU-Va-fdl"/>
+                            <constraint firstItem="k0N-a9-Fzw" firstAttribute="trailing" secondItem="cYZ-5V-j6X" secondAttribute="trailing" type="default" id="eR9-YK-ZI1"/>
+                            <constraint firstItem="k0N-a9-Fzw" firstAttribute="leading" secondItem="cYZ-5V-j6X" secondAttribute="leading" type="default" id="lTn-I0-s6z"/>
                             <constraint firstItem="GNH-2i-Mnp" firstAttribute="leading" secondItem="cYZ-5V-j6X" secondAttribute="leading" type="default" id="rtA-eq-Dxd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="BusPlus Driver" id="Ozz-4J-KmL"/>
+                    <navigationItem key="navigationItem" title="BusPlus Driver" id="Ozz-4J-KmL">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="xfX-n9-CGD">
+                            <connections>
+                                <segue destination="KJf-8o-HVa" kind="modal" modalPresentationStyle="formSheet" id="pSu-z2-XmL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="GNH-2i-Mnp" id="Gr1-xC-5L9"/>
+                        <outlet property="onDutyLabel" destination="XhW-Os-4eQ" id="glV-go-0Nr"/>
                         <segue destination="DJM-Mx-rMu" kind="modal" identifier="CreateSession" modalPresentationStyle="formSheet" id="fS0-tx-rjF"/>
                     </connections>
                 </viewController>
@@ -168,10 +185,134 @@
             </objects>
             <point key="canvasLocation" x="-163" y="-310"/>
         </scene>
+        <!--Settings View Controller - Settings-->
+        <scene sceneID="1d8-ot-Wgs">
+            <objects>
+                <tableViewController id="a0v-JM-sym" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ZvD-Fr-7t0">
+                        <rect key="frame" x="0.0" y="64" width="540" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SwitchCell" id="hlm-6S-fZ1" customClass="SwitchCell">
+                                <rect key="frame" x="0.0" y="54" width="540" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="31" y="1" width="478" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="On Duty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NA5-Zi-h0U">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="175" id="f6Q-2q-A7P"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mWC-E3-Zch">
+                                            <connections>
+                                                <action selector="switchChanged:" destination="hlm-6S-fZ1" eventType="valueChanged" id="Foz-CS-9ko"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="mWC-E3-Zch" firstAttribute="centerY" secondItem="NA5-Zi-h0U" secondAttribute="centerY" type="default" id="7jn-Tc-zfL"/>
+                                    <constraint firstAttribute="trailing" secondItem="mWC-E3-Zch" secondAttribute="trailing" constant="51" id="WWV-SC-e67"/>
+                                    <constraint firstItem="mWC-E3-Zch" firstAttribute="centerY" secondItem="hlm-6S-fZ1" secondAttribute="centerY" type="default" id="fP0-Vh-WCj"/>
+                                    <constraint firstItem="NA5-Zi-h0U" firstAttribute="leading" secondItem="hlm-6S-fZ1" secondAttribute="leading" constant="51" id="yCW-pS-Td7"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="onDuty" destination="mWC-E3-Zch" id="vtD-tF-Jy0"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SeatCell" id="FlI-Md-aZc" customClass="SeatCell">
+                                <rect key="frame" x="0.0" y="99" width="540" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="31" y="0.0" width="478" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Seats" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnM-vU-Qc7">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="108" id="mxt-Jk-cme"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="6MN-6x-G8W">
+                                            <connections>
+                                                <action selector="stepperChanged:" destination="FlI-Md-aZc" eventType="valueChanged" id="D2i-KT-4ty"/>
+                                            </connections>
+                                        </stepper>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YM-eB-FrS">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="PnD-gk-Oyx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6MN-6x-G8W" secondAttribute="trailing" constant="51" id="571-ka-ISg"/>
+                                    <constraint firstItem="6MN-6x-G8W" firstAttribute="top" secondItem="FlI-Md-aZc" secondAttribute="top" constant="8" id="CIF-PA-jRd"/>
+                                    <constraint firstItem="8YM-eB-FrS" firstAttribute="centerY" secondItem="6MN-6x-G8W" secondAttribute="centerY" type="default" id="H2q-kw-aA0"/>
+                                    <constraint firstItem="OnM-vU-Qc7" firstAttribute="leading" secondItem="FlI-Md-aZc" secondAttribute="leading" constant="51" id="X04-Hy-ZIW"/>
+                                    <constraint firstItem="6MN-6x-G8W" firstAttribute="leading" secondItem="8YM-eB-FrS" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="oug-Tb-mIM"/>
+                                    <constraint firstItem="8YM-eB-FrS" firstAttribute="baseline" secondItem="OnM-vU-Qc7" secondAttribute="baseline" type="default" id="vvD-hp-QQH"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="seatLabel" destination="8YM-eB-FrS" id="DVE-i7-lgm"/>
+                                    <outlet property="stepper" destination="6MN-6x-G8W" id="Qyd-LQ-EgB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="3mL-Dp-Rmr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="XVZ-p6-kly">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="a0v-JM-sym" id="2c6-k9-2Gu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRk-gb-QYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="819" y="909"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dvB-2h-MnE">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="KJf-8o-HVa" sceneMemberID="viewController">
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w8E-sJ-cuJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="a0v-JM-sym" kind="relationship" relationship="rootViewController" id="uJU-E3-0fo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YT5-uZ-GEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-163" y="909"/>
+        </scene>
     </scenes>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SeatCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SeatCell.h"/>
+            <relationships>
+                <relationship kind="action" name="stepperChanged:"/>
+                <relationship kind="outlet" name="seatLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="stepper" candidateClass="UIStepper"/>
+            </relationships>
         </class>
         <class className="SessionAuthViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SessionAuthViewController.h"/>
@@ -191,10 +332,24 @@
                 <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
             </relationships>
         </class>
+        <class className="SettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonPressed:"/>
+            </relationships>
+        </class>
+        <class className="SwitchCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SwitchCell.h"/>
+            <relationships>
+                <relationship kind="action" name="switchChanged:"/>
+                <relationship kind="outlet" name="onDuty" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
         <class className="WaypointsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WaypointsViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="onDutyLabel" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
     </classes>

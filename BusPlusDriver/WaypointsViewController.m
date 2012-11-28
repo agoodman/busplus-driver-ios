@@ -15,11 +15,20 @@
 
 @implementation WaypointsViewController
 
-@synthesize mapView;
+@synthesize mapView = _mapView, onDutyLabel = _onDutyLabel;
+
+- (void)updateUI
+{
+    self.onDutyLabel.title = [[NSUserDefaults standardUserDefaults] boolForKey:@"OnDuty"] ? @"YES" : @"NO";    
+}
+
+#pragma mark - View life cycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUI) name:@"SettingsChanged" object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -28,6 +37,8 @@
     if( !tDriver ) {
         [self performSegueWithIdentifier:@"CreateSession" sender:self];
     }
+    
+    [self updateUI];
 }
 
 - (void)didReceiveMemoryWarning

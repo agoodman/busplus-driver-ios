@@ -28,6 +28,12 @@
 		7EE8FE031665977B00401606 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDFD1665977B00401606 /* Security.framework */; };
 		7EE8FE041665977B00401606 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDFE1665977B00401606 /* SystemConfiguration.framework */; };
 		7EE8FE061665979500401606 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FE051665979500401606 /* QuartzCore.framework */; };
+		7EE8FE2616659D1700401606 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8FE2416659D1600401606 /* Model.xcdatamodeld */; };
+		7EE8FE291665A13400401606 /* SessionStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8FE281665A13400401606 /* SessionStartViewController.m */; };
+		7EE8FE2C1665A72200401606 /* SessionAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8FE2B1665A72200401606 /* SessionAuthViewController.m */; };
+		7EE8FE361665C28A00401606 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8FE351665C28900401606 /* SettingsViewController.m */; };
+		7EE8FE391665C31100401606 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8FE381665C31100401606 /* SwitchCell.m */; };
+		7EE8FE3C1665C52000401606 /* SeatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8FE3B1665C52000401606 /* SeatCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +80,17 @@
 		7EE8FDFD1665977B00401606 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7EE8FDFE1665977B00401606 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7EE8FE051665979500401606 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7EE8FE2516659D1700401606 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7EE8FE271665A13400401606 /* SessionStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionStartViewController.h; sourceTree = "<group>"; };
+		7EE8FE281665A13400401606 /* SessionStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionStartViewController.m; sourceTree = "<group>"; };
+		7EE8FE2A1665A72100401606 /* SessionAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionAuthViewController.h; sourceTree = "<group>"; };
+		7EE8FE2B1665A72200401606 /* SessionAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionAuthViewController.m; sourceTree = "<group>"; };
+		7EE8FE341665C28900401606 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		7EE8FE351665C28900401606 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		7EE8FE371665C31100401606 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
+		7EE8FE381665C31100401606 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
+		7EE8FE3A1665C52000401606 /* SeatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeatCell.h; sourceTree = "<group>"; };
+		7EE8FE3B1665C52000401606 /* SeatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeatCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +161,16 @@
 				7EE8FD9616658CE700401606 /* Supporting Files */,
 				7EE8FDC81665924500401606 /* WaypointsViewController.h */,
 				7EE8FDC91665924500401606 /* WaypointsViewController.m */,
+				7EE8FE271665A13400401606 /* SessionStartViewController.h */,
+				7EE8FE281665A13400401606 /* SessionStartViewController.m */,
+				7EE8FE2A1665A72100401606 /* SessionAuthViewController.h */,
+				7EE8FE2B1665A72200401606 /* SessionAuthViewController.m */,
+				7EE8FE341665C28900401606 /* SettingsViewController.h */,
+				7EE8FE351665C28900401606 /* SettingsViewController.m */,
+				7EE8FE371665C31100401606 /* SwitchCell.h */,
+				7EE8FE381665C31100401606 /* SwitchCell.m */,
+				7EE8FE3A1665C52000401606 /* SeatCell.h */,
+				7EE8FE3B1665C52000401606 /* SeatCell.m */,
 			);
 			path = BusPlusDriver;
 			sourceTree = "<group>";
@@ -175,6 +202,7 @@
 			children = (
 				7EE8FDC216658DC100401606 /* Storyboard-Pad.storyboard */,
 				7EE8FDC416658E8D00401606 /* Storyboard-Phone.storyboard */,
+				7EE8FE2416659D1600401606 /* Model.xcdatamodeld */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -266,6 +294,12 @@
 				7EE8FD9C16658CE700401606 /* main.m in Sources */,
 				7EE8FDA016658CE700401606 /* AppDelegate.m in Sources */,
 				7EE8FDCA1665924500401606 /* WaypointsViewController.m in Sources */,
+				7EE8FE2616659D1700401606 /* Model.xcdatamodeld in Sources */,
+				7EE8FE291665A13400401606 /* SessionStartViewController.m in Sources */,
+				7EE8FE2C1665A72200401606 /* SessionAuthViewController.m in Sources */,
+				7EE8FE361665C28A00401606 /* SettingsViewController.m in Sources */,
+				7EE8FE391665C31100401606 /* SwitchCell.m in Sources */,
+				7EE8FE3C1665C52000401606 /* SeatCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +427,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7EE8FE2416659D1600401606 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7EE8FE2516659D1700401606 /* Model.xcdatamodel */,
+			);
+			currentVersion = 7EE8FE2516659D1700401606 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7EE8FD8216658CE600401606 /* Project object */;
 }

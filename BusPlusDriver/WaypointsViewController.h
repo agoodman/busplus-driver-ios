@@ -13,5 +13,6 @@
 @interface WaypointsViewController : UIViewController <MKMapViewDelegate>
 
 @property (strong) IBOutlet MKMapView* mapView;
+@property (strong) IBOutlet UIBarButtonItem* onDutyLabel;
 
 @end
