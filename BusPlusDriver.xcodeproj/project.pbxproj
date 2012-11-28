@@ -16,7 +16,27 @@
 		7EE8FDA216658CE700401606 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDA116658CE700401606 /* Default.png */; };
 		7EE8FDA416658CE700401606 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDA316658CE700401606 /* Default@2x.png */; };
 		7EE8FDA616658CE700401606 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDA516658CE700401606 /* Default-568h@2x.png */; };
+		7EE8FDC016658D6C00401606 /* libBus Plus Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FDB816658D5700401606 /* libBus Plus Core.a */; };
+		7EE8FDC316658DC100401606 /* Storyboard-Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDC216658DC100401606 /* Storyboard-Pad.storyboard */; };
+		7EE8FDC516658E8D00401606 /* Storyboard-Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8FDC416658E8D00401606 /* Storyboard-Phone.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7EE8FDB716658D5700401606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE8FDAC16658D5600401606 /* Bus Plus Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7EE8FD3B166586B500401606;
+			remoteInfo = "Bus Plus Core";
+		};
+		7EE8FDBE16658D6500401606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE8FDAC16658D5600401606 /* Bus Plus Core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EE8FD3A166586B500401606;
+			remoteInfo = "Bus Plus Core";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7EE8FD8B16658CE600401606 /* BusPlusDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPlusDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +52,9 @@
 		7EE8FDA116658CE700401606 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7EE8FDA316658CE700401606 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7EE8FDA516658CE700401606 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7EE8FDAC16658D5600401606 /* Bus Plus Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Bus Plus Core.xcodeproj"; path = "BusPlusCore/Bus Plus Core.xcodeproj"; sourceTree = "<group>"; };
+		7EE8FDC216658DC100401606 /* Storyboard-Pad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Storyboard-Pad.storyboard"; sourceTree = "<group>"; };
+		7EE8FDC416658E8D00401606 /* Storyboard-Phone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Storyboard-Phone.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE8FDC016658D6C00401606 /* libBus Plus Core.a in Frameworks */,
 				7EE8FD9016658CE600401606 /* UIKit.framework in Frameworks */,
 				7EE8FD9216658CE600401606 /* Foundation.framework in Frameworks */,
 				7EE8FD9416658CE600401606 /* CoreGraphics.framework in Frameworks */,
@@ -51,6 +75,7 @@
 		7EE8FD8016658CE600401606 = {
 			isa = PBXGroup;
 			children = (
+				7EE8FDAC16658D5600401606 /* Bus Plus Core.xcodeproj */,
 				7EE8FD9516658CE700401606 /* BusPlusDriver */,
 				7EE8FD8E16658CE600401606 /* Frameworks */,
 				7EE8FD8C16658CE600401606 /* Products */,
@@ -78,6 +103,7 @@
 		7EE8FD9516658CE700401606 /* BusPlusDriver */ = {
 			isa = PBXGroup;
 			children = (
+				7EE8FDC116658D9600401606 /* Resources */,
 				7EE8FD9E16658CE700401606 /* AppDelegate.h */,
 				7EE8FD9F16658CE700401606 /* AppDelegate.m */,
 				7EE8FD9616658CE700401606 /* Supporting Files */,
@@ -99,6 +125,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7EE8FDAD16658D5600401606 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EE8FDB816658D5700401606 /* libBus Plus Core.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EE8FDC116658D9600401606 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7EE8FDC216658DC100401606 /* Storyboard-Pad.storyboard */,
+				7EE8FDC416658E8D00401606 /* Storyboard-Phone.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,6 +156,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7EE8FDBF16658D6500401606 /* PBXTargetDependency */,
 			);
 			name = BusPlusDriver;
 			productName = BusPlusDriver;
@@ -138,12 +182,28 @@
 			mainGroup = 7EE8FD8016658CE600401606;
 			productRefGroup = 7EE8FD8C16658CE600401606 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7EE8FDAD16658D5600401606 /* Products */;
+					ProjectRef = 7EE8FDAC16658D5600401606 /* Bus Plus Core.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7EE8FD8A16658CE600401606 /* BusPlusDriver */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7EE8FDB816658D5700401606 /* libBus Plus Core.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libBus Plus Core.a";
+			remoteRef = 7EE8FDB716658D5700401606 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7EE8FD8916658CE600401606 /* Resources */ = {
@@ -154,6 +214,8 @@
 				7EE8FDA216658CE700401606 /* Default.png in Resources */,
 				7EE8FDA416658CE700401606 /* Default@2x.png in Resources */,
 				7EE8FDA616658CE700401606 /* Default-568h@2x.png in Resources */,
+				7EE8FDC316658DC100401606 /* Storyboard-Pad.storyboard in Resources */,
+				7EE8FDC516658E8D00401606 /* Storyboard-Phone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +232,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7EE8FDBF16658D6500401606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Bus Plus Core";
+			targetProxy = 7EE8FDBE16658D6500401606 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7EE8FD9816658CE700401606 /* InfoPlist.strings */ = {
