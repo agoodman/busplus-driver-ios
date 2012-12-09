@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E73F810166AC6560068D59B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E73F80F166AC6560068D59B /* Icon.png */; };
+		7E73F812166AC65B0068D59B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E73F811166AC65B0068D59B /* Icon@2x.png */; };
+		7E73F814166AC9080068D59B /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E73F813166AC9080068D59B /* Icon-72.png */; };
 		7EB705F61665DFA7009D2CA0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB705F51665DFA7009D2CA0 /* CoreLocation.framework */; };
 		7EE8FD9016658CE600401606 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FD8F16658CE600401606 /* UIKit.framework */; };
 		7EE8FD9216658CE600401606 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8FD9116658CE600401606 /* Foundation.framework */; };
@@ -55,6 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E73F80F166AC6560068D59B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		7E73F811166AC65B0068D59B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		7E73F813166AC9080068D59B /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		7EB705F51665DFA7009D2CA0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7EE8FD8B16658CE600401606 /* BusPlusDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPlusDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE8FD8F16658CE600401606 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -122,6 +128,9 @@
 		7EE8FD8016658CE600401606 = {
 			isa = PBXGroup;
 			children = (
+				7E73F813166AC9080068D59B /* Icon-72.png */,
+				7E73F811166AC65B0068D59B /* Icon@2x.png */,
+				7E73F80F166AC6560068D59B /* Icon.png */,
 				7EE8FDAC16658D5600401606 /* Bus Plus Core.xcodeproj */,
 				7EE8FD9516658CE700401606 /* BusPlusDriver */,
 				7EE8FD8E16658CE600401606 /* Frameworks */,
@@ -285,6 +294,9 @@
 				7EE8FDA616658CE700401606 /* Default-568h@2x.png in Resources */,
 				7EE8FDC316658DC100401606 /* Storyboard-Pad.storyboard in Resources */,
 				7EE8FDC516658E8D00401606 /* Storyboard-Phone.storyboard in Resources */,
+				7E73F810166AC6560068D59B /* Icon.png in Resources */,
+				7E73F812166AC65B0068D59B /* Icon@2x.png in Resources */,
+				7E73F814166AC9080068D59B /* Icon-72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
