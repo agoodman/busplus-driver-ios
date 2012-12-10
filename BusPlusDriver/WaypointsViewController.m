@@ -32,7 +32,7 @@
 
 - (void)registerVehicle
 {
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert];
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge];
 }
 
 - (void)resolveLocation:(NSNotification*)aNotif
@@ -40,7 +40,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"PushNotificationEnabled" object:nil];
     
     NSString* tToken = (NSString*)aNotif.object;
-    [[NSUserDefaults standardUserDefaults] setValue:tToken forKey:@"APNsToken"];
+    [[NSUserDefaults standardUserDefaults] setValue:tToken forKey:@"Token"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     self.locationManager.delegate = self;
@@ -138,7 +138,7 @@
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
-    NSLog(@"Vehicle Web Error: %@",objectLoader.response.bodyAsString);
+    NSLog(@"Vehicle Web Error: %@\nrequest: %@",objectLoader.response.bodyAsString,objectLoader.response.request.HTTPBodyString);
     async_main(^{
         Alert(@"Vehicle Error", @"unable to save vehicle");
     })

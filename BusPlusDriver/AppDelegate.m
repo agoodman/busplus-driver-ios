@@ -11,6 +11,16 @@
 
 @implementation AppDelegate
 
+- (void)handleBidRequest:(Candidate*)aCandidate
+{
+    // TODO: compute number of seconds the given passenger would add to the waypoint path time
+    // for now, return 1200 (20mins)
+    aCandidate.bid = [NSNumber numberWithDouble:1200.0];
+    [[RKObjectManager sharedManager] putObject:aCandidate delegate:self];
+}
+
+#pragma mark - App life cycle
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // set up RestKit
@@ -57,8 +67,13 @@
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
     async_main(^{
-        NSLog(@"simulating push notification");
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"PushNotificationEnabled" object:@"abc123"];
+        if( [[error.userInfo description] rangeOfString:@"simulator"].location!=NSNotFound ) {
+            NSLog(@"simulating push notification");
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"PushNotificationEnabled" object:@"abc123"];
+        }else{
+            NSLog(@"push notification error: %@",error.userInfo);
+            Alert(@"Push Notification Required", @"An error was encountered");
+        }
     });
 }
 
@@ -69,6 +84,52 @@
         NSString* tToken = [[[tRaw stringByReplacingOccurrencesOfString:@"<" withString:@""] stringByReplacingOccurrencesOfString:@">" withString:@""] stringByReplacingOccurrencesOfString:@" " withString:@""];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"PushNotificationEnabled" object:tToken];
     });
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSLog(@"remote notification: %@",userInfo);
+    NSNumber* tCandidateId = [userInfo valueForKey:@"candidate_id"];
+    if( tCandidateId ) {
+        Candidate* tCandidate = [Candidate object];
+        tCandidate.candidateId = tCandidateId;
+        [[RKObjectManager sharedManager] getObject:tCandidate delegate:self];
+    }
+    
+    NSNumber* tPassengerId = [userInfo valueForKey:@"passenger_id"];
+    if( tPassengerId ) {
+        Passenger* tPassenger = [Passenger object];
+        tPassenger.passengerId = tPassengerId;
+        [[RKObjectManager sharedManager] getObject:tPassenger delegate:self];
+    }
+}
+
+#pragma mark - RKObjectLoaderDelegate
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+    NSLog(@"Candidate Web Error: %@",objectLoader.response.bodyAsString);
+    async_main(^{
+        Alert(@"Error processing bid request", [error localizedDescription]);
+    });
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObject:(id)object
+{
+    if( [object isKindOfClass:[Candidate class]] ) {
+        Candidate* tCandidate = (Candidate*)object;
+        if( tCandidate.bid.intValue!=0 ) {
+            // bid successfully submitted; wait for assignment
+        }else{
+            NSLog(@"candidate received: %@",object);
+            [self handleBidRequest:object];
+        }
+    }
+    if( [object isKindOfClass:[Passenger class]] ) {
+        async_main(^{
+            Alert(@"Passenger Assigned", @"You have been assigned a new passenger");
+        });
+    }
 }
 
 @end
