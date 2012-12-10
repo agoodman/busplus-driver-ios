@@ -32,7 +32,7 @@
 
 - (void)registerVehicle
 {
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge];
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge];
 }
 
 - (void)resolveLocation:(NSNotification*)aNotif
