@@ -126,9 +126,7 @@
         }
     }
     if( [object isKindOfClass:[Passenger class]] ) {
-        async_main(^{
-            Alert(@"Passenger Assigned", @"You have been assigned a new passenger");
-        });
+        NSLog(@"passenger assigned: %@",object);
     }
 }
 
