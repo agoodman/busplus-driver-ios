@@ -19,9 +19,11 @@
     </entity>
     <entity name="Passenger" representedClassName="Passenger" syncable="YES">
         <attribute name="assignedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dropoffAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="endLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="endLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="passengerId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pickupAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="startLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="startLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -44,7 +46,7 @@
     <elements>
         <element name="Candidate" positionX="160" positionY="192" width="128" height="150"/>
         <element name="Driver" positionX="160" positionY="192" width="128" height="135"/>
-        <element name="Passenger" positionX="160" positionY="192" width="128" height="195"/>
+        <element name="Passenger" positionX="160" positionY="192" width="128" height="225"/>
         <element name="Vehicle" positionX="160" positionY="192" width="128" height="195"/>
     </elements>
 </model>
